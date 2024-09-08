@@ -1,14 +1,18 @@
 import { Router, Request, Response } from 'express';
+import { countries } from '../data/countries';
+import { categories } from '../data/categories';
 const router = Router();
 
-// Örnek veri
 
-const countries: any = []
 
-// Tüm ülkeleri getir
 router.get('/countries', (req: Request, res: Response) => {
     res.json(countries);
 });
+
+router.get('/categories', (req: Request, res: Response) => {
+    res.json(categories);
+});
+
 
 // Belirli bir ülkeyi getir
 // router.get('/countries/:name', (req: Request, res: Response) => {
